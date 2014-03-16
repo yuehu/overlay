@@ -1,0 +1,19 @@
+{
+  "name": "overlay",
+  "repo": "yuehu/overlay",
+  "description": "A simple overlay for Yuehu.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/event": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "overlay.css"
+  ]
+}
