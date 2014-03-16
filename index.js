@@ -30,4 +30,5 @@ module.exports = Overlay;
 function create(tag, className) {
   var el = document.createElement(tag);
   el.className = className;
+  return el;
 }
