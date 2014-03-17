@@ -11,7 +11,7 @@
   position: fixed;
   top: 20%;
   max-height: 60%;
-  overflow-y: scroll;
+  overflow-y: auto;
   left: 50%;
   width: 400px;
   margin-left: -200px;
