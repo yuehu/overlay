@@ -23,6 +23,11 @@ function Overlay() {
   events.bind(close, 'click', function() {
     me.hide();
   });
+  events.bind(el, 'click', function(e) {
+    if (e.target === el) {
+      me.hide();
+    }
+  });
 }
 Overlay.prototype.show = function() {
   document.body._class.add('overlay-active');

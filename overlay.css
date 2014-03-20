@@ -53,7 +53,7 @@ body.overlay-active {
   display: none;
 }
 .overlay-close {
-  position: absolute;
+  position: fixed;
   top: 8px;
   right: 8px;
   color: #b3b3b1;
@@ -63,13 +63,14 @@ body.overlay-active {
   margin: 0;
   border: 0;
   outline: none;
-  font: 500 18px/1 "Helvetica Neue", sans-serif;
+  font: 500 24px/1 "Helvetica Neue", sans-serif;
 }
 .overlay-close:hover {
   cursor: pointer;
 }
 .overlay-container {
   max-width: 680px;
+  min-height: 100%;
   margin: 0 auto;
   padding: 60px 10px;
   box-sizing: border-box;
