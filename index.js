@@ -1,6 +1,11 @@
 var events = require('event');
 var classes = require('classes');
 
+var body = document.body;
+if (!body._class) {
+  body._class = classes(body);
+}
+
 function Overlay() {
   var el = create('div', 'overlay');
   el._class = classes(el);
@@ -21,15 +26,14 @@ function Overlay() {
   });
 }
 Overlay.prototype.show = function() {
-  if (this._inserted) {
-    this.el._class.remove('overlay-hide');
-  } else {
-    document.body.appendChild(this.el);
+  body._class.add('overlay-active');
+  if (!this._inserted) {
+    body.appendChild(this.el);
     this._inserted = true;
   }
 };
 Overlay.prototype.hide = function() {
-  this.el._class.add('overlay-hide');
+  body._class.remove('overlay-active');
 };
 Overlay.prototype.remove = function() {
   if (this.el.parentNode) {
