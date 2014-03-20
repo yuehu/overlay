@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overlay</title>
+  <script src="build/build.js"></script>
+  <link rel="stylesheet" href="build/build.css">
+</head>
+<body>
+  <div class="container">
+    <button id="trigger" class="button">Click Me</button>
+  </div>
+  <div id="overlay-html">
+    <h1>Overlay</h1>
+  </div>
+  <script>
+    var Overlay = require('overlay');
+    var o = new Overlay();
+    o.fill(document.getElementById('overlay-html'));
+    document.getElementById('trigger').onclick = function() {
+      o.show();
+    }
+  </script>
+</body>
+</html>
