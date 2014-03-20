@@ -1,14 +1,13 @@
 var events = require('event');
 var classes = require('classes');
 
-var body = document.body;
-if (!body._class) {
-  body._class = classes(body);
-}
-
 function Overlay() {
   var el = create('div', 'overlay');
   el._class = classes(el);
+
+  if (!document.body._class) {
+    document.body._class = classes(document.body);
+  }
 
   var close = create('button', 'overlay-close');
   close.innerHTML = '×';
@@ -26,14 +25,14 @@ function Overlay() {
   });
 }
 Overlay.prototype.show = function() {
-  body._class.add('overlay-active');
+  document.body._class.add('overlay-active');
   if (!this._inserted) {
-    body.appendChild(this.el);
+    document.body.appendChild(this.el);
     this._inserted = true;
   }
 };
 Overlay.prototype.hide = function() {
-  body._class.remove('overlay-active');
+  document.body._class.remove('overlay-active');
 };
 Overlay.prototype.remove = function() {
   if (this.el.parentNode) {
