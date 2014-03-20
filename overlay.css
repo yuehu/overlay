@@ -1,24 +1,37 @@
-.overlay-bg {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 99;
-}
 .overlay {
   position: fixed;
-  top: 20%;
-  max-height: 60%;
-  overflow-y: auto;
-  left: 50%;
-  width: 400px;
-  margin-left: -200px;
-  box-shadow: 0 0 6px #aaa;
-  background: white;
-  padding: 10px 5px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: #f9f9f9;
+  background: rgba(255,255,255,0.96);
+  text-align: center;
+  z-index: 999;
+}
+.overlay-hide {
+  display: none;
+}
+.overlay-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #b3b3b1;
+  background: #f9f9f9;
+  background: rgba(0,0,0,0);
+  padding: 4px;
+  margin: 0;
+  border: 0;
+  outline: none;
+  font: 500 18px/1 "Helvetica Neue", sans-serif;
+}
+.overlay-close:hover {
+  cursor: pointer;
+}
+.overlay-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 60px 10px;
   box-sizing: border-box;
-  border-radius: 3px;
-  z-index: 100;
 }
