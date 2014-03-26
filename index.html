@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overlay</title>
+  <script src="build/build.js"></script>
+  <link rel="stylesheet" href="build/build.css">
+  <style>
+    body {
+      font: 500 16px/1.6 "Helvetica Neue", Helvetica, sans-serif;
+    }
+    .overlay p {
+      font-weight: 400;
+      color: #999;
+    }
+    .container {
+      max-width: 650px;
+      margin: 0 auto;
+      padding-top: 200px;
+      text-align: center;
+    }
+    .container p, .container a {
+      color: #666;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.8em 1.2em;
+      margin: 0;
+      background: #222223;
+      color: #f9f9f8;
+      border: 0;
+      border-radius: 3px;
+      letter-spacing: 0.1em;
+      font: 700 0.8em/1 "Arial", sans-serif;
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 100px;
+    }
+    .button.active {
+      background: black;
+    }
+    .button:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="trigger" class="button">Click Me</button>
+    <p><a href="https://github.com/yuehu/overlay">Fork me on GitHub</a></p>
+    <p>Designed for <a href="http://yuehu.io/">Yuehu</a></p>
+    <p>A component by <a href="http://lepture.com/">Hsiaoming Yang</a></p>
+  </div>
+  <div style="display: none">
+    <div id="overlay-html">
+      <h1>Overlay</h1>
+      <p>An overlay is over the current page.</p>
+      <div style="margin-top:100px">
+        <a class="button" href="https://github.com/yuehu/overlay">View Documentation</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    var Overlay = require('overlay');
+    var o = new Overlay();
+    o.fill(document.getElementById('overlay-html'));
+    document.getElementById('trigger').onclick = function() {
+      o.show();
+    }
+  </script>
+</body>
+</html>
