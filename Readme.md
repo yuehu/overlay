@@ -2,6 +2,8 @@
 
 A simple overlay for Yuehu.
 
+Showcase at <http://yuehu.github.io/overlay/>.
+
 ## Installation
 
 Install with [component(1)](http://component.io):
