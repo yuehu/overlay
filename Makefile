@@ -20,4 +20,4 @@ publish:
 	@ghp-import gh-pages -n
 	@rm -fr gh-pages
 
-.PHONY: clean
+.PHONY: clean build
