@@ -10,6 +10,7 @@ function Overlay() {
   }
 
   var close = create('button', 'overlay-close');
+  close.setAttribute('aria-label', 'Close');
   close.innerHTML = '×';
   el.appendChild(close);
 
@@ -22,11 +23,6 @@ function Overlay() {
   var me = this;
   events.bind(close, 'click', function() {
     me.hide();
-  });
-  events.bind(el, 'click', function(e) {
-    if (e.target === el) {
-      me.hide();
-    }
   });
 }
 Overlay.prototype.show = function() {
