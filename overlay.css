@@ -35,7 +35,6 @@
 }
 body.overlay-active {
   overflow: hidden;
-  position: fixed;
 }
 .overlay-active .overlay {
   display: block;
