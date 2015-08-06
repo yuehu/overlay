@@ -401,6 +401,23 @@ function Overlay() {
   events.bind(close, 'click', function() {
     me.hide();
   });
+  events.bind(document.body, 'touchmove', function(e) {
+    if (!classes(document.body).has('overlay-active')) return;
+
+    var target = e.target;
+    while (target !== document.body) {
+      if (target === el) {
+        if (el.scrollHeight > el.offsetHeight) {
+          return;
+        } else {
+          e.preventDefault();
+          return;
+        }
+      }
+      target = target.parentNode;
+    }
+    e.preventDefault();
+  });
 }
 Overlay.prototype.show = function() {
   document.body._class.add('overlay-active');
