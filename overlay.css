@@ -54,7 +54,7 @@ body.overlay-active {
   text-align: center;
   z-index: 999;
   display: none;
-  -webkit-overflow-scrolling:touch
+  -webkit-overflow-scrolling: touch;
 }
 .overlay-close {
   position: fixed;
